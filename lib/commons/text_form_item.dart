@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+
+// ignore: non_constant_identifier_names
+Widget TextFormItem(
+    BuildContext context, String nome, bool obscure, String lala) {
+  return SizedBox(
+      width: MediaQuery.of(context).size.width * .85,
+      child: TextFormField(
+        keyboardType: TextInputType.emailAddress,
+        obscureText: obscure,
+        decoration: InputDecoration(
+          labelText: (lala),
+          hintText: nome,
+          labelStyle: const TextStyle(
+            fontSize: 12,
+            color: Colors.purple,
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: const BorderSide(
+              width: 1,
+              color: Colors.grey,
+            ),
+            borderRadius: BorderRadius.circular(15),
+          ),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(
+              width: 1.5,
+              color: Colors.grey,
+            ),
+          ),
+        ),
+      ));
+}
